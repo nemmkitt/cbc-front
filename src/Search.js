@@ -26,6 +26,7 @@ function Search() {
   const [searchBy, setSearchBy] = useState('all')
   const [user, setUser] = useState('')
   const [password, setPassword] = useState('')
+  
   const handleSearch = (event) => {
     event.preventDefault();
     window.location = `/searching?by=${searchBy}&key=${searchKey}`
@@ -69,13 +70,15 @@ function Search() {
             <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel" style={{ fontSize: "40px" }}>Sign in&nbsp;<img src={srch} alt="icon" width="66" /></h5>
             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-          <form onSubmit={{handleLogin}}>
+          
           <div className="offcanvas-body">
+          <form onSubmit={handleLogin}>
             <TextField id="standard-basic" label="Username" variant="standard" style={{ width: "300px" }} onChange={(event) => { setUser(event.target.value) }} autoComplete='off'/><br></br><br></br>
-            <TextField type="password" id="password" label="Password" variant="standard" style={{ width: "300px" }} onChange={(event) => { setPassword(event.target.value) }} /><br></br><br></br><br></br>
+            <TextField type="password" id="password" label="Password" variant="standard" style={{ width: "300px" }} onChange={(event) => { setPassword(event.target.value) }} /><br></br><br></br><br></br>       
             <button type="submit" className="btn btn-dark" style={{ fontFamily: "Futura", marginTop: "30px" }} onClick={handleLogin}> Submit </button>
+            </form>
           </div>
-          </form>
+         
         </ThemeProvider>
       </div>
       <ThemeProvider theme={theme}>

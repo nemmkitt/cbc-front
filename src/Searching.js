@@ -35,7 +35,6 @@ export default function Searching() {
         fetch(fetchurl)
             .then(res => res.json())
             .then((result) => {
-                console.log(result)
                 setInfo(result)
             })
     }, [])
@@ -80,7 +79,7 @@ export default function Searching() {
                             <div className="card border-dark mb-3" style={{ width: "20rem", height: "15rem", fontFamily: "Futura" }}>
                                 <div className="card-body">
                                     <h5 className="card-title" style={{ textAlign: "right" }}>Certificate No. {item.certificateNo}</h5><hr></hr>
-                                    <h6 className="card-text">Product/Service  " {item.scope} "</h6>
+                                    <h6 className="card-text">Product/Service :  {item.scope} </h6>
                                     <h6 className="card-text">Standard : {item.standard}</h6>
                                     <h6 className="card-text">Company : {item.company}</h6>
                                     <h6 className="card-text">Approval Date : {new Date(item.approval).toLocaleDateString('en-GB', { year: 'numeric', month: 'short', day: '2-digit' })}</h6>
