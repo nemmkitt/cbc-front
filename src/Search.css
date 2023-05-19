@@ -1,0 +1,29 @@
+.custom-textfield {
+    font-family: Futura, sans-serif;
+  }
+  
+  .bg-image {
+    height: 100vh;
+    background-image: url("./Pic/6418449.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+
+.search{
+    font-family: "Didot";
+    font-size: 148px;
+}
+
+a{
+    font-family: "Futura";
+}
+
+h5{
+  font-family: "Futura";
+}
+
+.btn-dark{
+  margin-left: 14rem;
+}
